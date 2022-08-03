@@ -32,14 +32,7 @@ class _PlayVideosState extends State<PlayVideos>
     super.initState();
 
     _chewieController = ChewieController(
-      //* VideoPlayer Network constructor for playing video from internet
       videoPlayerController: VideoPlayerController.network(widget.videoUrl),
-
-      //* VideoPlayer Asset constructor for playing video from application's asset folder
-      // videoPlayerController: VideoPlayerController.asset('assets/videos/himdeveIntro.mp4'),
-
-      //* VideoPlayer File constructor for playing video from phone storage
-      // videoPlayerController: VideoPlayerController.file(File(widget.videoUrl)),
       aspectRatio: 16 / 9,
 
       autoInitialize: true,
