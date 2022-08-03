@@ -8,6 +8,22 @@ import 'package:flicktape/src/modal/videos.dart';
 
 import 'components/homeTabs.dart';
 
+class Frog extends StatelessWidget {
+  const Frog({
+    Key? key,
+    this.color = const Color(0xFF2DBD3A),
+    this.child,
+  }) : super(key: key);
+
+  final Color color;
+  final Widget? child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(color: color, child: child);
+  }
+}
+
 class PlayVideos extends StatefulWidget {
   final String imageUrl;
   final String desc;
@@ -34,7 +50,6 @@ class _PlayVideosState extends State<PlayVideos>
     _chewieController = ChewieController(
       videoPlayerController: VideoPlayerController.network(widget.videoUrl),
       aspectRatio: 16 / 9,
-
       autoInitialize: true,
       autoPlay: true,
       looping: false,
